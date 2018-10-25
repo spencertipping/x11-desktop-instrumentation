@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#
+# Prints the ID of the desktop window.
+#
+
+window_id=$(($(xwininfo -name Desktop | grep Desktop | mawk "{print \$4}")))
+echo $window_id
